@@ -112,11 +112,51 @@ button {
 
 .mobileNav a {
   display: inline-block;
-  background: #f0e6d2; ;  /*change this color to preference*/
+  background: #f0e6d2; ; 
   padding: 10px;
   margin-bottom: 10px;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  grid-gap: 50px;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 1.5px;
+  background-color: #000000;
+  margin: 5px;
+}
+
+@keyframes appear {
+  from {
+      opacity: 0;
+  }   
+  to {
+      opacity: 1;
+  } 
+}
+
+
+@media screen and (max-width: 929px) {
+  .featured {
+      grid-template-columns: auto;
+  }
+  
+  header {
+      grid-template-columns: 1fr auto;
+  }
+  button {
+      display: block;
+  }
+  .defaultNav {
+      display: none;
+  }
 }
 
 /* This is the parent container, likely the body or a main wrapper div */
@@ -163,10 +203,10 @@ button {
 }
 
 .decorative-image {
-  position: absolute; /* Positioned absolutely within the .container */
-  max-width: 100px; /* Set a max-width to control the image size */
-  max-height: auto; /* Set to auto to maintain the aspect ratio */
-  transition: transform 0.5s ease-out; /* Smooth transition for zoom effect */
+  position: absolute; 
+  max-width: 100px; 
+  max-height: auto; 
+  transition: transform 0.5s ease-out; 
 }
 
 @keyframes bounceZoom {

@@ -325,31 +325,27 @@ footer h1 {
 
 .container {
   position: relative;
-  width: 100%; /* Make the container responsive */
-  max-width: 1200px; /* Maximum width */
-  margin: auto; /* Center the container */
+  width: 100%; 
+  max-width: 1200px; 
+  margin: auto; 
 }
 
 .decorative-image {
   position: absolute;
-  max-width: 100px; /* Example max-width, adjust based on your design */
-  transition: all 0.3s ease; /* Smooth transition for any changes */
+  max-width: 100px; 
+  transition: all 0.3s ease; 
 }
 
-/* Example Media Query for screens smaller than 768px */
 @media (max-width: 600px) {
   .decorative-image {
-    max-width: 50px; /* Smaller images on smaller screens */
+    max-width: 50px; 
   }
   
-  /* Adjust positioning for smaller screens if necessary */
-  .decorative-image:nth-child(1) { /* Example: Adjusting the first image */
-    top: 20%; /* Adjust positioning */
+  .decorative-image:nth-child(1) { 
+    top: 20%; 
     left: 10%;
   }
-  
-  /* Repeat for other images as needed */
-}
+  }
 
 
 
