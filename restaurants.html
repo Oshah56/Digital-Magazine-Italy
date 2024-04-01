@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Page</title> 
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/restaurant.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Indie+Flower&family=Kanit:ital,wght@0,300;0,400;1,200&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cinzel:wght@400..900&family=Fredoka:wght@300..700&family=Madimi+One&family=Patua+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="defaultNav">
+        <ul>
+        <li><a href="welcome.html">Welcome</a></li>
+        <li><a href="food.html">Culinary Italia</a></li>
+        <li><a href="restaurants.html" class="current-page">Italian Hotspots</a></li>
+        <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </nav>
+    <button onclick="toggleMenu()">
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+        <div class="menu-icon"></div>
+    </button>
+    <nav id="mobileNav" class="mobileNav hidden">
+        <a href="welcome.html">Welcome</a>
+        <a href="food.html">Culinary Italia</a>
+        <a href="restaurants.html" class="current-page">Italian Hotspots</a>
+        <a href="credits.html">Credits</a>
+    </nav>
+</header>
+<div id="content">
+    <div class="background-container">
+    <img src="images/italy-2.webp" alt="Red Show Curtains" class="background-image">
+      <div class="content">
+        <h1>Explore the Heart of Italy</h1>
+        <h1>Explore the Heart of Italy</h1>
+      </div>
+    </div>
+  <div class="top-restaurants">
+    <h2 href="link-to-restaurant" style="background-image: url('images/scroll.png'); background-size: contain; background-position: center; background-repeat: no-repeat; padding: 50px;">Top Restaurants</h2>
+    <div class="top-restaurants-line"></div>
+    <div class="restaurant-links">
+    <ul>
+        <li><a class="link-to-restaurant" style="background-image: url('images/scroll.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 50px;" href="#restaurant1">Seu Pizza Illuminati </a></li>
+        <li><a class="link-to-restaurant" style="background-image: url('images/scroll.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 50px;" href="#restaurant2">Grotta Palazzese</a></li>
+        <li><a class="link-to-restaurant" style="background-image: url('images/scroll.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 50px;" href="#restaurant3">La Sponda</a></li>
+    </ul>
+    </div>
+
+    <!---Restaurnat 1----->
+
+<section class="restaurant-section">
+
+    <a id = "restaurant1">
+    <h3>Seu Pizza Illuminati</h3>
+    </a>
+    <div class="restaurant-image">
+      <img src="images/restarunt-1-res.jpg" alt="Restaurant 1">
+    </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider" id="slider">
+          <div class="slide"><img src="images/restarunt-1-food2.jpg" alt="Photo 1"></div>
+          <div class="slide"><img src="images/restarunt-1-food3.jpg" alt="Photo 2"></div>
+          <div class="slide"><img src="images/restarunt-1-food4.jpg" alt="Photo 3"></div>
+          <div class="slide"><img src="images/restarunt-1-food5.jpg" alt="Photo 4"></div>
+
+        </div>
+  </div>
+  <div class="review-header">
+    <h1>Reviews</h1>
+  </div>
+  <!-- The Modal -->
+<div class="modal reviewModal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form class="reviewForm" novalidate>
+      <label for="nameInput">Your Name</label>
+      <input type="text" class="nameInput" required>
+      
+      <div class="rating">
+        <!-- Star rating input -->
+        <input type="radio" id="star5" name="rating" value="5" required><label for="star5">☆</label>
+        <input type="radio" id="star4" name="rating" value="4" required><label for="star4">☆</label>
+        <input type="radio" id="star3" name="rating" value="3" required><label for="star3">☆</label>
+        <input type="radio" id="star2" name="rating" value="2" required><label for="star2">☆</label>
+        <input type="radio" id="star1" name="rating" value="1" required><label for="star1">☆</label>
+      </div>
+      
+      <label for="reviewText">Your Review</label>
+      <textarea class="reviewText" required></textarea>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+  <!-- The Reviews -->
+        <div class="reviews-container">
+            <div class="reviews">
+              <article class="review">
+                <img src="images/iccon2.png" alt="User Icon" class="user-icon">
+                <div class="review-content">
+                  <span class="stars">★★★★☆</span> 
+                  <p><strong>Josh Han</strong></p>
+                  <p>Best Restaurant ever. Very delicous pizza. My go to whenever I'm craving pizza</p>
+                </div>
+              </article>
+              <article class="review">
+                <img src="images/icon1.png" alt="User Icon" class="user-icon">
+                <div class="review-content">
+                  <span class="stars">★★★★☆</span>
+                  <p><strong>Jack Jan</strong></p>
+                  <p>I loved the food. very beautiful place.</p>
+                </div>
+              </article>
+              <article class="review">
+                <img src="images/icon3.png" alt="User Icon" class="user-icon">
+                <div class="review-content">
+                  <span class="stars">★★★★☆</span>
+                  <p><strong>Aron Ward</strong></p>
+                  <p>I really loved this place. Very beautiful</p>
+                </div>
+              </article>
+              <article class="review">
+                <img src="images/icon4.png" alt="User Icon" class="user-icon">
+                <div class="review-content">
+                  <span class="stars">★★★★☆</span>
+                  <p><strong>Karen Mooba</strong></p>
+                  <p>Their food is great and the place is greater. Definatily recommend</p>
+                </div>
+              </article>
+              <article class="review">
+                <img src="images/icon5.png" alt="User Icon" class="user-icon">
+                <div class="review-content">
+                  <span class="stars">★★★★☆</span>
+                  <p><strong>Bob Bando</strong></p>
+                  <p>Very beautiful. Best pizza's ever</p>
+                </div>
+              </article>
+              <article class="review">
+                <img src="images/icon6.png" alt="User Icon" class="user-icon">
+                <div class="review-content">
+                  <span class="stars">★★★★☆</span>
+                  <p><strong>Jessica Banda</strong></p>
+                  <p>Loved everything about this place. I will always come here whenever i come to Italy</p>
+                </div>
+              </article>            
+            </div>
+        </div>
+
+  <!-- Button to Open the Modal -->
+  <button class="openModal">Write a Review</button>
+
+  <!--Map-->
+
+  <div class="review-header">
+    <h1>Map</h1>
+  </div>
+        <div class="map-placeholder">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11882.455038252483!2d12.4683423!3d41.8796558!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6024c87c23ed%3A0x6392e705e16761e9!2sSeu%20Pizza%20Illuminati!5e0!3m2!1sen!2sca!4v1711748630274!5m2!1sen!2sca"            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        
+    </div>
+    <div class="visit-header">
+      <h1><a href="https://www.seupizza.com/" target="_blank" class="button-link">Visit Their Website</a></h1>
+    </div>
+</section>
+
+
+    <!---Restaurant 2-->
+    <section class="restaurant-section">
+
+    <a id = "restaurant2">
+    <h3>Grotta Palazzese</h3>
+    </a>
+    <div class="restaurant-image">
+      <img src="images/restarunt-2.jpg" alt="Restaurant 2">
+    </div>
+    </div>
+    <div class="slider-container">
+      <div class="slider" id="slider">
+          <div class="slide"><img src="images/res-2-2.jpg" alt="Photo 1"></div>
+          <div class="slide"><img src="images/res-2-7.jpg" alt="Photo 2"></div>
+          <div class="slide"><img src="images/res-2-3.jpg" alt="Photo 3"></div>
+          <div class="slide"><img src="images/res-2-4.jpg" alt="Photo 4"></div>
+          <div class="slide"><img src="images/res-2-5.jpg" alt="Photo 5"></div>
+          <div class="slide"><img src="images/res-2-6.webp" alt="Photo 6"></div>
+          <div class="slide"><img src="images/res-2-2.jpg" alt="Photo 7"></div>
+          <div class="slide"><img src="images/res-2-3.jpg" alt="Photo 8"></div>
+      </div>
+  </div>
+  <div class="review-header">
+    <h1>Reviews</h1>
+  </div>
+<!-- The Modal -->
+<div class="modal reviewModal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form class="reviewForm" novalidate>
+      <label for="nameInput">Your Name</label>
+      <input type="text" class="nameInput" required>
+      
+      <div class="rating">
+        <!-- Star rating input -->
+        <input type="radio" id="star5" name="rating" value="5" required><label for="star5">☆</label>
+        <input type="radio" id="star4" name="rating" value="4" required><label for="star4">☆</label>
+        <input type="radio" id="star3" name="rating" value="3" required><label for="star3">☆</label>
+        <input type="radio" id="star2" name="rating" value="2" required><label for="star2">☆</label>
+        <input type="radio" id="star1" name="rating" value="1" required><label for="star1">☆</label>
+      </div>
+      
+      <label for="reviewText">Your Review</label>
+      <textarea class="reviewText" required></textarea>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+  <!-- The Reviews -->
+        <div class="reviews-container">
+          <div class="reviews">
+            <article class="review">
+              <img src="images/iccon2.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span> 
+                <p><strong>Josh Han</strong></p>
+                <p>Best Restaurant ever. Very delicous food. My go to whenever I'm craving fancy food</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon1.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Jack Jan</strong></p>
+                <p>I loved the food. very beautiful place.</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon3.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Aron Ward</strong></p>
+                <p>I really loved this place. Very beautiful</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon4.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Karen Mooba</strong></p>
+                <p>Their food is great and the place is greater. Definatily recommend</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon5.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Bob Bando</strong></p>
+                <p>Very beautiful. Best restaurant ever</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon6.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Jessica Banda</strong></p>
+                <p>Loved everything about this place. I will always come here whenever i come to Italy</p>
+              </div>
+            </article>            
+          </div>
+        </div>
+
+  <!-- Button to Open the Modal -->
+  <button class="openModal">Write a Review</button>
+  <div class="review-header">
+    <h1>Map</h1>
+  </div>
+        <div class="map-placeholder">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12045.364125002596!2d17.2211111!3d40.9959083!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347cb9366b69f03%3A0x90775e48edca5819!2sGrotta%20Palazzese!5e0!3m2!1sen!2sca!4v1711808269548!5m2!1sen!2sca" width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        
+    </div>
+    <div class="visit-header">
+      <h1><a href="https://www.grottapalazzese.it/" target="_blank" class="button-link">Visit Their Website</a></h1>
+    </div>
+    </section>
+
+
+
+    <!--restaruant 3-->
+    <section class="restaurant-section">
+
+      <a id = "restaurant3">
+      <h3>La Sponda</h3>
+      </a>
+      <div class="restaurant-image">
+        <img src="images/res3-8.jpg" alt="Restaurant 3">
+      </div>
+      </div>
+      <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide"><img src="images/res3.jpg" alt="Photo 1"></div>
+            <div class="slide"><img src="images/res3-2.jpg" alt="Photo 2"></div>
+            <div class="slide"><img src="images/res3-3.jpg" alt="Photo 3"></div>
+            <div class="slide"><img src="images/res3-4.jpg" alt="Photo 4"></div>
+            <div class="slide"><img src="images/res3-54.jpg" alt="Photo 5"></div>
+            <div class="slide"><img src="images/res3-9.jpg" alt="Photo 6"></div>
+          </div>
+    </div>
+    <div class="review-header">
+      <h1>Reviews</h1>
+    </div>
+    <!-- The Modal -->
+<div class="modal reviewModal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form class="reviewForm" novalidate>
+      <label for="nameInput">Your Name</label>
+      <input type="text" class="nameInput" required>
+      
+      <div class="rating">
+        <!-- Star rating input -->
+        <input type="radio" id="star5" name="rating" value="5" required><label for="star5">☆</label>
+        <input type="radio" id="star4" name="rating" value="4" required><label for="star4">☆</label>
+        <input type="radio" id="star3" name="rating" value="3" required><label for="star3">☆</label>
+        <input type="radio" id="star2" name="rating" value="2" required><label for="star2">☆</label>
+        <input type="radio" id="star1" name="rating" value="1" required><label for="star1">☆</label>
+      </div>
+      
+      <label for="reviewText">Your Review</label>
+      <textarea class="reviewText" required></textarea>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+  <!-- The Reviews -->
+        <div class="reviews-container">
+          <div class="reviews">
+            <article class="review">
+              <img src="images/iccon2.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span> 
+                <p><strong>Josh Han</strong></p>
+                <p>Best Restaurant ever. Very delicous food. My go to whenever I'm craving fancy food</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon1.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Jack Jan</strong></p>
+                <p>I loved the food. very beautiful place.</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon3.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Aron Ward</strong></p>
+                <p>I really loved this place. Very beautiful</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon4.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Karen Mooba</strong></p>
+                <p>Their food is great and the place is greater. Definatily recommend</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon5.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Bob Bando</strong></p>
+                <p>Very beautiful. Best restaurant ever</p>
+              </div>
+            </article>
+            <article class="review">
+              <img src="images/icon6.png" alt="User Icon" class="user-icon">
+              <div class="review-content">
+                <span class="stars">★★★★☆</span>
+                <p><strong>Jessica Banda</strong></p>
+                <p>Loved everything about this place. I will always come here whenever i come to Italy</p>
+              </div>
+            </article>            
+          </div>
+        </div>
+
+  <!-- Button to Open the Modal -->
+  <button class="openModal">Write a Review</button>
+  
+    <!--Map-->
+  
+    <div class="review-header">
+      <h1>Map</h1>
+    </div>
+          <div class="map-placeholder">
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12112.190131078765!2d14.4875827!3d40.6288337!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b976b94c17e85%3A0x36748183e0bf138e!2sLa%20Sponda!5e0!3m2!1sen!2sca!4v1711809017195!5m2!1sen!2sca" width="600"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          
+      </div>
+      <div class="visit-header">
+        <h1><a href="https://sirenuse.it/en/la-sponda-restaurant/" target="_blank" class="button-link">Visit Their Website</a></h1>
+      </div>
+  </section> 
+</div>
+
+
+
+<footer>
+  <h1> &copy Copyright 2024. Italy 1995</h1>
+</footer>
+<script src="script/restaurant.js"></script>
+
+</body>
+</html>
+  

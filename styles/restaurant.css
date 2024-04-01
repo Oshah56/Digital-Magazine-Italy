@@ -1,0 +1,931 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+    font-size: 6em;
+    text-align: center;
+  }
+  
+
+@font-face {
+    font-family: 'against';
+    src: url(fonts/against-regular) format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff8eb;
+  font-family: "Fredoka", sans-serif; 
+  animation: slide-in 1s ease forwards;
+  animation-play-state: running; 
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  justify-content: center;
+  padding: 50px;
+  background: #9ddaf3; 
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
+  font-family: 'against', sans-serif; 
+  
+}
+
+header a {
+  text-decoration: none;
+  color: #333; 
+  font-size: 20px;
+  font-weight: bold;
+  background: #f0e6d2; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  transition: all 0.3s ease; 
+  position: relative;
+}
+
+header ul {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  align-items: center; 
+}
+
+header li {
+  margin: 0 10px;
+}
+
+header li:not(:last-child):after {
+  content: '|';
+  color: #333;
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+header a:hover, .navbar a:focus {
+  color: #d04b4b; 
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+header a.current-page {
+  font-weight: bold;
+  color: #d04b4b;
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+li:hover {
+  animation: hoverAnimation 1s ease;
+}
+
+
+button {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-self: right;
+}
+
+
+.mobileNav {
+  grid-column: span 2;
+  animation: appear 1s;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobileNav a {
+  display: inline-block;
+  background: #f0e6d2; ;  /*change this color to preference*/
+  padding: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  grid-gap: 50px;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 1.5px;
+  background-color: #000000;
+  margin: 5px;
+}
+
+@keyframes appear {
+  from {
+      opacity: 0;
+  }   
+  to {
+      opacity: 1;
+  } 
+}
+
+
+@media screen and (max-width: 929px) {
+  .featured {
+      grid-template-columns: auto;
+  }
+  
+  header {
+      grid-template-columns: 1fr auto;
+  }
+  button {
+      display: block;
+  }
+  .defaultNav {
+      display: none;
+  }
+}
+
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 500px; 
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content h1 {
+  position: absolute;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 5em; /* Adjust font size for responsiveness */
+  background: rgba(143, 253, 255, 0.7);
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-family: 'fredoka', cursive;
+}
+
+.content h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #1a6565;
+}
+
+.content h1:nth-child(2) {
+  color: #1a5165;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+  }
+}
+  
+  @keyframes animate {
+    0%, 100% {
+      clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+      clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+  }
+  
+  /*colors
+  
+  Light blue: RGB(158, 217, 243)
+Olive green: RGB(85, 115, 59)
+Cream: RGB(242, 229, 175)
+Yellow: RGB(243, 215, 73)
+Red: RGB(228, 88, 76)
+
+*/
+  
+  .top-restaurants {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+  }
+  
+  .top-restaurants h2 {
+      margin: 0;
+      font-size: 4em;
+      display: inline-block; /* Align to the background */
+      border-radius: 10px;
+      font-family: 'against', sans-serif;
+
+  }
+  
+  .top-restaurants-line {
+    width: 0%; /* Start with 0 width to grow from nothing */
+    border-bottom: 20px solid RGB(85, 115, 59);
+    margin-bottom: 10px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: width 2s; /* Animate the width property over 2 seconds */
+    visibility: hidden; /* Hide it initially */
+  
+  }
+
+  .link-to-restaurant {
+    display: block;
+  padding: 50px; /* Adjust padding to control the size of the clickable area */
+  text-align: center;
+  text-decoration: none;
+  color: black; /* Text color */
+  font-size: 1.5em; /* Text size */
+  transition: 0.3s;
+  }
+  
+  .restaurant-links ul {
+    list-style: none;
+    padding: 5%; 
+  }
+  
+  .restaurant-links ul li {
+    display: inline-block;
+    padding: 20px; 
+    position: relative;
+    margin: 0 20px; 
+    font-size: 2em; 
+    font-family: 'indie flower', sans-serif;
+    transform: scale(0.9); /* Start slightly scaled down */
+    opacity: 0; /* Start invisible */
+    transition: transform 0.3s, opacity 0.3s; /* Animate scale and opacity */
+  }
+  
+  .restaurant-links a {
+    display: block;
+    padding: 50px; /* Increase padding as needed */
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em; /* Keep the text size the same */
+    transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    background-size: contain; /* Use cover instead of contain to make sure the background image covers the entire element */
+    background-position: center;
+    
+}
+  
+  .restaurant-links a:hover {
+    color: #ac0505; /* Change text color on hover */
+  }
+  
+  .restaurant-links ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 5;
+    left: 50%; /* Start from the middle */
+    right: 50%; /* End at the middle */
+    height: 2px; /* Thickness of the underline */
+    background: rgb(255, 225, 0); /* Yellow color for the underline */
+    transition: left 0.3s, right 0.3s;
+    
+   
+  }
+  
+  .restaurant-links ul li:hover::after {
+    left: 0; /* Extend to the full width */
+    right: 0; /* Extend to the full width */
+    height: 8px; /* Make it thicker on hover if you want */
+  }
+  
+  .restaurant-section h3 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: RGB(228, 88, 76);
+    color: #fff1f1;
+    font-family: 'indie flower', sans-serif;  
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+
+
+   /* Style for main image */
+  
+.restaurant-image img {
+  width: 80%; /* Adjusts the width to create space around */
+  height: auto;
+  display: block;
+  margin: 100px auto; /* Center image with equal space on all sides */    
+}
+  
+.slider-container {
+  max-width: 70%;
+  height: 500px; /* Set a specific height for the slider */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%; /* Each slide takes full width of the container */
+    height: 100%; /* Each slide also takes full height of the container */
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow of the image */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will cover the entire area, and may crop the image */
+  }
+
+.review-header h1 {
+  display: block; /* Ensure the button takes up the full width */
+  margin: 5% auto; /* Center the button horizontally */
+  padding: 50px; /* Adjust padding as needed */
+  background-color: #479742; /* Example background color */
+  color: #fffdee; /* Example text color */
+  font-size: 4em; 
+  text-align: center;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.openModal {
+  display: block; /* Ensure the button takes up the full width */
+  margin: 2% auto; /* Center the button horizontally */
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #f97554; /* Example background color */
+  color: #fffdee; /* Example text color */
+  border: none; /* Example border */
+  border-radius: 5px; /* Example border radius */
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.openModal:hover {
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+  .reviews-container {
+    overflow-y: scroll;
+    width: 60%;
+    height: 500px; /* Adjust the height as needed */
+    position: relative;
+    display: block;
+    margin: 40px auto;
+
+  }
+  
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  }
+  
+  .review {
+    border: 1px solid #ccc;
+    margin-bottom: 20px; /* Adds space between reviews */
+    padding: 20px; /* Increases padding to make the review content larger */
+    display: flex;
+    align-items: flex-start;
+    background-color: #d9ffc0;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .user-icon {
+    width: 80px; /* Increases the size of the user icon */
+    height: 80px; /* Increases the size of the user icon */
+    border-radius: 50%;
+    margin-right: 20px; /* Adds space between the icon and the text */
+    object-fit: cover; /* Ensures the image covers the div without being stretched */
+  }
+  
+  .review-content {
+    flex: 1; /* Ensures that the content takes up the remaining space */
+  }
+  
+  
+  .review .stars {
+    color: #fbb;
+    display: block; /* Makes the stars go on their own line */
+    font-size: 1.5em; /* Makes the stars bigger */
+  
+  }
+  
+  /* Scroll snap CSS */
+  .reviews-container {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .review {
+    scroll-snap-align: start;
+  }
+
+  .review-content > * { 
+    margin-bottom: 10px; 
+  }
+  
+  .review-content > *:last-child { 
+    margin-bottom: 0; 
+  }
+  
+
+
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #f3ffa2;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #5f8545;
+    width: 30%; 
+    position: relative;
+    
+    
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #f06e6e;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Star Rating */
+  .rating input[type="radio"] {
+    display: none;
+  }
+  
+  .rating label {
+    color: rgb(71, 4, 4);
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .rating input[type="radio"]:checked ~ label {
+    color: rgb(255, 119, 0);
+  }
+  
+  .rating {
+    direction: rtl;
+    text-align: left;
+  }
+  
+  .rating label {
+    direction: ltr;
+  }
+
+  
+  input:required,
+textarea:required {
+  border: 2px solid #ccc; /* Default border color */
+}
+
+input:invalid,
+textarea:invalid {
+  border: 2px solid red; /* Highlight in red if the field is invalid */
+}
+
+/* You can also style the label associated with the invalid input for additional indication */
+input:invalid + label,
+textarea:invalid + label {
+  color: red;
+}
+
+
+  /*Map*/
+
+  
+.map-placeholder {
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
+  align-items: center; /* Align items vertically in the center */
+  height: 500px;
+  width: 80%;
+  margin: 40px auto; /* Center the container horizontally */
+  background-color: #ffdeae;
+  padding: 20px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder iframe {
+  width: 100%; /* Make the iframe fill its container */
+  height: 100%;
+  border: none; /* Optional: if you want to remove the border */
+}
+    
+
+
+
+.visit-header h1 {
+  font-size: 2.5em; 
+  text-align: center;
+  
+}
+
+.button-link {
+  display: inline-block;
+  padding: 2%;
+  margin: 2.5% auto;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.button-link:hover {
+  background-color: #45a049;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 50px;
+  background: #9ddaf3; 
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+footer h1 {
+  font-family: 'Tagettes', cursive; 
+  color: #333; 
+  font-size: 2em; 
+  background: #f0e6d2; 
+  padding: 10px 15px; 
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Responsive Design*/
+
+/*Header*/
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 50px;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+  }
+
+  .navbar li {
+    margin: 0 15px;
+  }
+
+  .navbar li:not(:last-child):after {
+    content: '|';
+    color: #333;
+    margin-left: 15px;
+    font-weight: normal;
+  }
+
+  .navbar a {
+    font-size: 0.5em;
+  }
+}
+
+/* Mobile and under */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar a {
+    font-size: 0.5em; 
+    padding: 8px 10px;
+  }
+}
+
+/* Other Sections */
+
+/* Tablet and up */
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 20px; /* Slightly more padding on larger screens */
+  }
+
+  .navbar ul {
+    justify-content: center; /* Center the list */
+  }
+
+  .navbar li {
+    margin: 0 15px; /* Spacing out the items a bit more on larger screens */
+  }
+
+  .navbar a {
+    font-size: 1.2em; /* Adjusted font size for readability */
+  }
+}
+
+/* Adjustments for mobile and smaller */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; /* Stack the navbar items */
+  }
+
+  .navbar li {
+    margin: 5px 0; /* Reduced margin for a stacked layout */
+  }
+
+  .navbar a {
+    font-size: 1em; /* Ensure font size is legible on small screens */
+  }
+
+  .navbar li:not(:last-child):after {
+    display: none; /* Hide separators on small screens */
+  }
+}
+
+/* section2*/
+
+@media (max-width: 768px) {
+  .top-restaurants {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .top-restaurants h2 {
+    font-size: 3em; 
+  }
+
+  .restaurant-links ul li {
+    font-size: 1.5em; 
+    padding: 15px; 
+  }
+
+  .restaurant-links a {
+    padding: 30px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .top-restaurants {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .top-restaurants h2 {
+    font-size: 2em; 
+  }
+
+  .restaurant-links ul {
+    padding: 0; 
+  }
+
+  .restaurant-links ul li {
+    font-size: 1em; 
+    margin: 0 10px; 
+    padding: 10px; 
+  }
+
+  .restaurant-links a {
+    padding: 20px;
+    font-size: 1em; 
+  }
+
+  .restaurant-section h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .restaurant-image img {
+    margin: 50px auto; 
+  }
+
+  .slider-container {
+    max-width: 80%;
+    height: 400px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .restaurant-image img {
+    width: 90%; 
+    margin: 30px auto;
+  }
+
+  .slider-container {
+    max-width: 90%; 
+    height: 300px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .review-header h1 {
+    font-size: 3em; 
+    padding: 30px; 
+  }
+
+  .openModal {
+    font-size: 1.5em; 
+    padding: 15px; 
+  }
+
+  .reviews-container {
+    width: 80%; 
+    height: 400px; 
+  }
+
+  .user-icon {
+    width: 60px; 
+    height: 60px; 
+  }
+
+  .review .stars {
+    font-size: 1.2em; 
+  }
+}
+
+@media (max-width: 480px) {
+  .review-header h1 {
+    font-size: 2em; 
+    padding: 20px; 
+  }
+
+  .openModal {
+    font-size: 1.2em; 
+    padding: 10px; 
+  }
+
+  .reviews-container {
+    width: 90%; 
+    height: 300px; 
+  }
+
+  .review {
+    padding: 10px; 
+  }
+
+  .user-icon {
+    width: 50px; 
+    height: 50px; 
+  }
+
+  .review .stars {
+    font-size: 1em; 
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 60%; 
+    margin: 15% auto; 
+  }
+
+  .close {
+    font-size: 24px; 
+  }
+
+  .rating label {
+    font-size: 25px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%; 
+    margin: 20% auto; 
+  }
+
+  .close {
+    font-size: 20px; 
+  }
+
+  .rating label {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-placeholder {
+    height: 400px; 
+    width: 90%; 
+  }
+
+  .visit-header h1 {
+    font-size: 2em; 
+  }
+
+  .button-link {
+    padding: 15px;
+    font-size: 1em; 
+  }
+}
+
+@media (max-width: 480px) {
+  .map-placeholder {
+    height: 300px; 
+    width: 100%; 
+  }
+
+  .visit-header h1 {
+    font-size: 1.5em; 
+  }
+
+  .button-link {
+    padding: 10px; 
+    font-size: 0.9em;
+    margin: 10px auto; 
+  }
+}
+
+/*Footer*/
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  footer h1 {
+    font-size: 2em;
+  }
+}
+
+/* Mobile and under*/
+
+@media (max-width: 480px) {
+  footer {
+    padding: 15px;
+  }
+
+  footer h1 {
+    font-size: 1.2em; 
+    padding: 8px 10px;
+  }
+}

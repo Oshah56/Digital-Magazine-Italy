@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+    font-size: 6em;
+    text-align: center;
+  }
+  
+
+@font-face {
+    font-family: 'against';
+    src: url(fonts/against-regular) format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff8eb;
+    font-family: "Fredoka", sans-serif;
+    animation: slide-in 1s ease forwards;
+    animation-play-state: running; 
+
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  justify-content: center;
+  padding: 50px;
+  background: #9ddaf3; 
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
+  font-family: 'against', sans-serif; 
+  
+}
+
+header a {
+  text-decoration: none;
+  color: #333; 
+  font-size: 20px;
+  font-weight: bold;
+  background: #f0e6d2; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  transition: all 0.3s ease; 
+  position: relative;
+}
+
+header ul {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  align-items: center; 
+}
+
+header li {
+  margin: 0 10px;
+}
+
+header li:not(:last-child):after {
+  content: '|';
+  color: #333;
+  margin-left: 20px;
+  font-weight: normal;
+}
+
+header a:hover, .navbar a:focus {
+  color: #d04b4b; 
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+header a.current-page {
+  font-weight: bold;
+  color: #d04b4b;
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+li:hover {
+  animation: hoverAnimation 1s ease;
+}
+
+
+button {
+  display: none;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-self: right;
+}
+
+
+.mobileNav {
+  grid-column: span 2;
+  animation: appear 1s;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.mobileNav a {
+  display: inline-block;
+  background: #f0e6d2; ;  /*change this color to preference*/
+  padding: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  grid-gap: 50px;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 1.5px;
+  background-color: #000000;
+  margin: 5px;
+}
+
+@keyframes appear {
+  from {
+      opacity: 0;
+  }   
+  to {
+      opacity: 1;
+  } 
+}
+
+
+@media screen and (max-width: 929px) {
+  .featured {
+      grid-template-columns: auto;
+  }
+  
+  header {
+      grid-template-columns: 1fr auto;
+  }
+  button {
+      display: block;
+  }
+  .defaultNav {
+      display: none;
+  }
+}
+  
+.header h1 {
+  display: block; 
+  margin: 5% auto;
+  font-size: 5em;
+  font-family: 'indie flower', sans-serif;
+  padding: 40px; 
+  background-color: #588940; 
+  color: #fffdee; 
+  text-align: center;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.credits-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px; 
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+.credit-item {
+  display: grid;
+  grid-template-columns: minmax(auto, 120px) 1fr; 
+  grid-template-areas: "photo text";
+  background: #ffa690;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 50px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  align-items: center; 
+  transition: transform 0.3s;
+}
+
+.credit-item:nth-child(2) {
+  align-self: flex-start;
+}
+
+.credit-item:hover {
+    transform: scale(1.03); 
+  }
+
+.credit-photo {
+  grid-area: photo;
+  border-radius: 50%;
+  width: 250px; 
+  height: 300px; 
+  object-fit: cover;
+  justify-self: center; 
+  margin-right: 20px;
+}
+
+.credit-text {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.5em;
+}
+
+.credit-text h3 {
+    font-family: 'against', sans-serif;
+    font-size: 2em;
+    padding-bottom: 2%;
+    
+
+}
+
+.credit-text p {
+    font-family: 'fredoka', sans-serif;
+    color: #000;
+    text-indent: 40px;
+}
+
+.credit-name, .credit-title, .credit-bio {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .credits-section {
+    flex-direction: column;
+  }
+
+  .credit-item {
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+      "photo"
+      "text";
+    text-align: center; 
+  }
+
+  .credit-item:nth-child(2) {
+    margin-top: 50px;
+  }
+
+  .credit-photo {
+    justify-self: center;
+    margin-right: 0; 
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 50px;
+  background: #9ddaf3; 
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+footer h1 {
+  font-family: 'Tagettes', cursive; 
+  color: #333; 
+  font-size: 2em; 
+  background: #f0e6d2; 
+  padding: 10px 15px; 
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.container {
+  position: relative; 
+  width: 100%;
+  height: 100%;
+}
+
+.decorative-image {
+  position: absolute; 
+  max-width: 100px; 
+  max-height: auto; 
+  transition: transform 0.5s ease-out; 
+}
+
+@keyframes bounceZoom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce-zoom {
+  animation: bounceZoom 1s ease forwards;
+}
+
+
+.container {
+  position: relative;
+  width: 100%; /* Make the container responsive */
+  max-width: 1200px; /* Maximum width */
+  margin: auto; /* Center the container */
+}
+
+.decorative-image {
+  position: absolute;
+  max-width: 100px; /* Example max-width, adjust based on your design */
+  transition: all 0.3s ease; /* Smooth transition for any changes */
+}
+
+/* Example Media Query for screens smaller than 768px */
+@media (max-width: 600px) {
+  .decorative-image {
+    max-width: 50px; /* Smaller images on smaller screens */
+  }
+  
+  /* Adjust positioning for smaller screens if necessary */
+  .decorative-image:nth-child(1) { /* Example: Adjusting the first image */
+    top: 20%; /* Adjust positioning */
+    left: 10%;
+  }
+  
+  /* Repeat for other images as needed */
+}
+
+
+
+/*Footer*/
+
+/* Tablet and up */
+@media (min-width: 600px) {
+  footer h1 {
+    font-size: 2em;
+  }
+}
+
+/* Mobile and under*/
+
+@media (max-width: 480px) {
+  footer {
+    padding: 15px;
+  }
+
+  footer h1 {
+    font-size: 1.2em; 
+    padding: 8px 10px;
+  }
+}

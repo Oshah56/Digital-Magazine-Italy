@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title> 
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/welcome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Indie+Flower&family=Kanit:ital,wght@0,300;0,400;1,200&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cinzel:wght@400..900&family=Fredoka:wght@300..700&family=Madimi+One&family=Patua+One&display=swap" rel="stylesheet">
+</head>
+    
+<body>
+    <header>
+        <nav class="defaultNav">
+            <ul>
+            <li><a href="welcome.html" class="current-page">Welcome</a></li>
+            <li><a href="food.html">Culinary Italia</a></li>
+            <li><a href="restaurants.html">Italian Hotspots</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            </ul>
+        </nav>
+        <button onclick="toggleMenu()">
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+            <div class="menu-icon"></div>
+        </button>
+        <nav id="mobileNav" class="mobileNav hidden">
+            <a href="welcome.html" class="current-page">Welcome</a>
+            <a href="food.html">Culinary Italia</a>
+            <a href="restaurants.html">Italian Hotspots</a>
+            <a href="credits.html">Credits</a>
+        </nav>
+    </header>
+
+    <div class="main-title">
+    <h2>Unveiling Italy’s Iconic Food Secrets</h2>
+    </div>
+
+    <div class="image-grid">
+    <div><img src="images/gallery1.webp" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery2.webp" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery3.webp" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery4.jpg" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery5.jpg" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery6.jpg" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery7.jpg" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery8.webp" alt="Italy" class="image-placeholder"></div>
+    <div><img src="images/gallery9.jpg" alt="Italy" class="image-placeholder"></div>
+    </div>
+
+    <div class="footer">
+    <h2>About Italy</h2>
+    <div class="footer-text">
+        <p>Welcome to our website dedicated to celebrating the rich cultural tapestry of Italy, where every corner tells a story of exquisite cuisine and famous hotspots. Italy's culinary heritage is as diverse as its landscapes, spanning from the beach to the countryside. Indulge your senses as we take you on a journey through the heart of Italy, exploring iconic dishes that have captivated taste buds around the world. But our journey doesn't end there. Join us as we uncover hidden culinary gems and Michelin-starred marvels, where culinary excellence meets timeless tradition. Whether you're a seasoned food enthusiast or a curious traveler, prepare to embark on an unforgettable adventure through the flavors of Italy.</p>
+        
+    </div>
+    </div>
+
+    <footer>
+    <h1> &copy Copyright 2024. Italy 1995</h1>
+    </footer>
+
+    <script src="script/welcome.js"></script>
+</body>
+</html>
