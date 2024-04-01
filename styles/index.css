@@ -256,6 +256,15 @@ button {
 .grid-item-3 { grid-column: 11 / 12; grid-row: 1 / 2; }
 .grid-item-5 { grid-column: 4 / 5; grid-row: 4 / 5; }
 
-
+@media (max-width: 600px) {
+  .decorative-image {
+    max-width: 50px; 
+  }
+  
+  .decorative-image:nth-child(1) { 
+    top: 20%; 
+    left: 10%;
+  }
+  }
 
 
